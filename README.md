@@ -56,6 +56,6 @@ ConfigVersion: "1.0"
 ```
 
 # Contributed code since 2016
-* [PikyCZ](github.com/PikyCZ)
-* [Creeperface01](github.com/Creeperface01)
-* [benlo123](github.com/benlo123)
+* [PikyCZ](//github.com/PikyCZ)
+* [Creeperface01](//github.com/Creeperface01)
+* [benlo123](//github.com/benlo123)
