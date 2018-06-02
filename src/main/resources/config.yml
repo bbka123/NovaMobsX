@@ -13,6 +13,7 @@ DespawnTime: 1500
 #TaskSettings
 AutoSpawnTask: true
 DespawnTask: true
+ItemOnGroundRemoveTask: true
 #...........
 #TaskSettings
 #ConfigSettings

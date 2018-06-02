@@ -33,6 +33,7 @@ import com.pikycz.novamobs.entities.projectile.*;
 import com.pikycz.novamobs.event.EventListener;
 import com.pikycz.novamobs.task.AutoSpawnTask;
 import com.pikycz.novamobs.task.DespawnTask;
+import com.pikycz.novamobs.task.ItemCleanTask;
 import java.util.HashMap;
 import java.util.List;
 
@@ -52,6 +53,7 @@ public class NovaMobsX extends PluginBase implements Listener {
     //Boolean
     public static boolean AutoSpawnTask;
     public static boolean DespawnTask;
+    public static boolean ItemOnGroundRemoveTask;
 
     //String
     public String PluginPrefix = TextFormat.colorize("&c[&bNova&6MobsX&c]");
@@ -71,6 +73,7 @@ public class NovaMobsX extends PluginBase implements Listener {
 
         AutoSpawnTask = pluginConfig.getBoolean("AutoSpawnTask", true);
         DespawnTask = pluginConfig.getBoolean("DespawnTask", true);
+        ItemOnGroundRemoveTask = pluginConfig.getBoolean("ItemOnGroundRemoveTask", true);
         int AutoSpawnTime = pluginConfig.getInt("AutoSpawnTime", 0);
         int DespawnTime = pluginConfig.getInt("DespawnTime", 0);
 
@@ -85,6 +88,12 @@ public class NovaMobsX extends PluginBase implements Listener {
         if (DespawnTask) {
             if (DespawnTime > 0) {
                 this.getServer().getScheduler().scheduleRepeatingTask(this, new DespawnTask(this), DespawnTime);
+            }
+        }
+
+        if (ItemOnGroundRemoveTask) {
+            if (DespawnTime > 0) {
+                this.getServer().getScheduler().scheduleRepeatingTask(this, new ItemCleanTask(this), DespawnTime);
             }
         }
 
