@@ -14,7 +14,7 @@ import com.pikycz.novamobs.entities.monster.FlyingMonster;
 
 /**
  *
- * @author Jaroslav Pikart
+ * @author PikyCZ
  */
 public class Phantom extends FlyingMonster {
 

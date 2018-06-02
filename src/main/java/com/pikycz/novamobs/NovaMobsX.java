@@ -280,5 +280,4 @@ public class NovaMobsX extends PluginBase implements Listener {
 
         levelsToSpawn.remove(level.getId());
     }
-
 }
